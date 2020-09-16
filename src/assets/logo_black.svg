@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 208.333px;
+        filter: url(#filter);
+        fill: #333;
+        font-weight: 800;
+        font-style: italic;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        text-anchor: middle;
+      }
+
+      .cls-1, .cls-3 {
+        font-family: Roboto;
+      }
+
+      .cls-2, .cls-3 {
+        font-size: 37.5px;
+      }
+
+      .cls-2 {
+        filter: url(#filter-2);
+      }
+
+      .cls-3 {
+        fill: #3b3a3a;
+        font-weight: 300;
+      }
+    </style>
+    <filter id="filter" x="214" y="350" width="573" height="241" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="0.835" dy="5.942" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.449"/>
+      <feFlood result="flood" flood-opacity="0.21"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="174" y="628" width="659" height="39" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="0.835" dy="5.942" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.449"/>
+      <feFlood result="flood" flood-opacity="0.21"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <path id="text-path" d="M37.44,162.48L305.452,68.4"/>
+  </defs>
+  <text id="nc." class="cls-1" transform="translate(522.745 575.167) scale(2)"><tspan x="0">nc.</tspan></text>
+  <text class="cls-2"><textPath startOffset="50%" xlink:href="#text-path"><tspan class="cls-3" x="0">DATA SCIENCE &amp; ARTIFICIAL INTELLIGENCE</tspan></textPath></text>
+</svg>
