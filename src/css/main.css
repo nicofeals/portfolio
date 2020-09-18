@@ -621,6 +621,12 @@ Jobs
   align-items: center;
   margin-bottom: 1.25rem;
 }
+.job-logo {
+  max-height: 5rem;
+  max-width: 7rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 .job-desc p {
   margin-bottom: 0;
   color: var(--clr-grey-3);
@@ -700,7 +706,7 @@ Projects
   font-size: 1.5rem;
 }
 .project-desc {
-  word-spacing: 15px;
+  word-spacing: 0.1rem;
   color: var(--clr-grey-3);
 }
 .project-stack {
