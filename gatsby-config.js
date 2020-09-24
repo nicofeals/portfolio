@@ -38,6 +38,12 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'Nicolas Ceccarello',

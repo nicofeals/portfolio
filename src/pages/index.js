@@ -45,7 +45,7 @@ export default ({data}) => {
       <div id="skills">
         <Services id="skills"/>
       </div>
-      <Projects projects={projects} title="FEATURED PROJECTS" showLink/>
+      <Projects projects={projects} title="FEATURED PROJECTS" showLink id="featured-projects"/>
       <div id="experience">
         <Jobs id="experience"></Jobs>
       </div>
