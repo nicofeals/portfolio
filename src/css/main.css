@@ -531,12 +531,12 @@ Hero
   position: fixed;
   bottom: 0;
   right: 0;
-  margin-bottom: 5rem;
-  margin-right: 5rem;
+  margin-bottom: 1rem;
+  margin-right: 0.8rem;
   font-size: 2.5rem;
   opacity: 0.5;
   cursor: pointer;
-  animation: fadeIn 0.3s;
+  animation: fadeIn 0.3s ;
   transition: opacity 0.4s;
 }
 
@@ -605,6 +605,12 @@ Hero
 
   .hero h4 {
     line-height: 1;
+  }
+  .scroll-top{
+    margin-bottom: 5rem;
+    margin-right: 5rem;
+    font-size: 2.5rem;
+    z-index: 2;
   }
 }
 
@@ -1138,6 +1144,7 @@ About Page
     column-gap: 4rem;
   }
   .about-img {
+    max-width: 80%;
     grid-column: 1 / span 5;
     margin-bottom: 0;
   }

@@ -39,6 +39,7 @@ export const query = graphql`
 export default ({data}) => {
   const {allStrapiProjects:{nodes:projects}} = data
   const [showScroll, setShowScroll] = useState(false)
+  const [iconColor, setIconColor] = useState("black")
   const checkScrollTop = () => {    
     if (!showScroll && window.pageYOffset > 400){
         setShowScroll(true)    
@@ -46,7 +47,16 @@ export default ({data}) => {
         setShowScroll(false)    
     }  
   };
+
+  const listenScrollEvent = e => {
+    if (window.scrollY > 4560) {
+      setIconColor("white")
+    } else {
+      setIconColor("black")
+    }
+  }
   window.addEventListener('scroll', checkScrollTop)
+  window.addEventListener('scroll', listenScrollEvent)
   return (
     <Layout>
       <div id="home">
@@ -59,7 +69,7 @@ export default ({data}) => {
       <div id="experience">
         <Jobs id="experience"></Jobs>
       </div>
-      <BsChevronUp className="scroll-top" onClick={() => scroll.scrollToTop()} style={{display: showScroll ? 'flex' : 'none'}}></BsChevronUp>
+      <BsChevronUp className="scroll-top" onClick={() => scroll.scrollToTop()} style={{display: showScroll ? 'flex' : 'none',color:iconColor}}></BsChevronUp>
     </Layout>
     )
 }
