@@ -11,7 +11,7 @@ const Error = () => {
       <div style={{position:"absolute",left:"50%",top:"20%"}}>
         <h3>Sorry, we couldn't find this page...</h3>
       </div>
-      <div style={{position:"absolute",left:"50%",top:"40%"}}>
+      <div style={{position:"absolute",left:"50%",top:"35%"}}>
         <Link to="/" className="btn">back home</Link>
       </div>
       <NotFound className="error-img"/>
