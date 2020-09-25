@@ -32,7 +32,10 @@ return <section className="section bg-gray">
     <div className="section-center services-center">
       {language_images.allFile.edges.map(image => { 
         return (
-          <Img fluid={image.node.childImageSharp.fluid} className="service"/>
+          <div className="service-wrap">
+            <div className="service-description">{image.node.name}</div>
+            <Img fluid={image.node.childImageSharp.fluid} className="service" alt={image.node.name}/>
+          </div>
         )})}
     </div>
     <div className="underline" style={{width:700, height:1}}></div>

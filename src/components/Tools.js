@@ -26,7 +26,10 @@ const Tools = () => {
     <div className="section-center services-center">
       {tools_images.allFile.edges.map(image => { 
         return (
-          <Img fluid={image.node.childImageSharp.fluid} className="service"/>
+          <div className="service-wrap">
+            <div className="service-description">{image.node.name}</div>
+            <Img fluid={image.node.childImageSharp.fluid} className="service"/>
+          </div>
         )})}
     </div>
   )

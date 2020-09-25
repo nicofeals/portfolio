@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
@@ -9,6 +9,7 @@ import Blogs from "../components/Blogs"
 // import {FaArrowUp} from "react-icons/fa"
 import {BsChevronUp} from "react-icons/bs"
 import { animateScroll as scroll } from "react-scroll"
+import { MdNotificationsNone } from "react-icons/md"
 
 export const query = graphql`
   {
@@ -37,6 +38,15 @@ export const query = graphql`
 
 export default ({data}) => {
   const {allStrapiProjects:{nodes:projects}} = data
+  const [showScroll, setShowScroll] = useState(false)
+  const checkScrollTop = () => {    
+    if (!showScroll && window.pageYOffset > 400){
+        setShowScroll(true)    
+    } else if (showScroll && window.pageYOffset <= 400){
+        setShowScroll(false)    
+    }  
+  };
+  window.addEventListener('scroll', checkScrollTop)
   return (
     <Layout>
       <div id="home">
@@ -49,7 +59,7 @@ export default ({data}) => {
       <div id="experience">
         <Jobs id="experience"></Jobs>
       </div>
-      <BsChevronUp className="scroll-top" onClick={() => scroll.scrollToTop()}></BsChevronUp>
+      <BsChevronUp className="scroll-top" onClick={() => scroll.scrollToTop()} style={{display: showScroll ? 'flex' : 'none'}}></BsChevronUp>
     </Layout>
     )
 }
