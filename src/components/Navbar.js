@@ -2,15 +2,20 @@ import React from "react"
 import logo from "../assets/logo_black_round.png"
 import { FaAlignRight } from "react-icons/fa"
 import PageLinks from "../constants/links"
-const Navbar = () => {
+const Navbar = ({home, toggleSidebar}) => {
+  var classname = "navbar"
+  if (home === false) {
+    classname = "navbar-grey"
+  }
+
   return (
-    <nav className="navbar">
+    <nav className={classname}>
       <div className="nav-center">
         <div className="nav-header">
           <a href="/">
             <img src={logo} alt="logo" width='140px' className="nav-logo"/>
           </a>
-          <button type="button" className="toggle-btn">
+          <button type="button" className="toggle-btn" onClick={toggleSidebar}>
             <FaAlignRight></FaAlignRight>
           </button>
         </div>

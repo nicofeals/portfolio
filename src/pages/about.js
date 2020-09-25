@@ -5,7 +5,11 @@ import Title from "../components/Title"
 import Image from "gatsby-image"
 // ...GatsbyImageSharpFluid
 const About = () => {
-  return <h2>about page</h2>
+  return <Layout>
+    <section className="about-page">
+      <Title title="ABOUT ME"></Title>
+    </section>
+  </Layout>
 }
 
 export default About

@@ -26,13 +26,13 @@ const Services = () => {
   `
   const language_images = useStaticQuery(language_query)
 
-return <section className="section bg-gray">
+  return <section className="section bg-gray">
     <Title title="SKILLS"/>
     <SmallTitle title="Languages"/>
     <div className="section-center services-center">
       {language_images.allFile.edges.map(image => { 
         return (
-          <div className="service-wrap">
+          <div className="service-wrap" key={image.node.id}>
             <div className="service-description">{image.node.name}</div>
             <Img fluid={image.node.childImageSharp.fluid} className="service" alt={image.node.name}/>
           </div>

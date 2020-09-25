@@ -23,10 +23,10 @@ const Tools = () => {
   const tools_images = useStaticQuery(tools_query)
 
   return (
-    <div className="section-center services-center">
+    <div className="section-center tools-center">
       {tools_images.allFile.edges.map(image => { 
         return (
-          <div className="service-wrap">
+          <div className="service-wrap" key={image.node.id}>
             <div className="service-description">{image.node.name}</div>
             <Img fluid={image.node.childImageSharp.fluid} className="service"/>
           </div>

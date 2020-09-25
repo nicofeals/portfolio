@@ -35,9 +35,7 @@ const Jobs = () => {
     allStrapiJobs:{ nodes:jobs },
   } = data
   const [value, setValue] = React.useState(0)
-  console.log(data)
   const {company, position, date, website, logo, desc} = jobs[value]
-  console.log(company, position, date, website, desc)
   return (
     <section className="section jobs">
       <Title title="EXPERIENCE"></Title>
