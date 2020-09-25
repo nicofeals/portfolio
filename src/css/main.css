@@ -234,7 +234,7 @@ Navbar
   display: flex;
   align-items: center;
   z-index: 200;
-  background: transparent;
+  background: var(--clr-primary-10);
 }
 .navbar-grey{
   position: absolute;
@@ -313,7 +313,7 @@ Navbar
 
 @media screen and (min-width: 992px) {
   .navbar {
-    background: transparent;
+    background: var(--clr-primary-10);
   }
 }
 /*
@@ -1059,11 +1059,27 @@ Pages
   place-items: center;
   background: var(--clr-primary-10);
   text-align: center;
+  padding-top: 3rem;
 }
-.error-page h1 {
-  text-transform: uppercase;
+.error-page h3 {
+  position: relative;
   color: var(--clr-primary-1);
-  margin-bottom: 2rem;
+  font-weight: 500;
+  width: max-content;
+  top: -20%;
+  left: -50%;
+  z-index: 2;
+}
+.error-page .btn{
+  position: relative;
+  left: -50%;
+  top: -40%;
+  z-index: 2;
+}
+.error-img{
+  max-height: 90%;
+  max-width: 90%;
+  z-index: 1;
 }
 /*
 ===============

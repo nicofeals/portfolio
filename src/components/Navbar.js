@@ -7,7 +7,7 @@ const Navbar = ({home, toggleSidebar}) => {
   if (home === false) {
     classname = "navbar-grey"
   }
-
+  console.log(classname, home)
   return (
     <nav className={classname}>
       <div className="nav-center">
