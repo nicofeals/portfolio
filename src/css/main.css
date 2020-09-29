@@ -268,7 +268,10 @@ Navbar
   margin-top: 1rem;
 }
 .toggle-btn {
+  position: fixed;
   font-size: 2rem;
+  right: 0;
+  margin-right: 0.1rem;
   background: transparent;
   border-color: transparent;
   color: black;
@@ -295,7 +298,7 @@ Navbar
   .nav-links a {
     text-transform: capitalize;
     color: var(--clr-grey-1);
-    font-weight: thin;
+    font-weight: 200;
     letter-spacing: var(--small-spacing);
     transition: var(--transition);
     padding: 0.5rem 0;
@@ -363,8 +366,8 @@ Sidebar
 }
 .close-btn {
   position: absolute;
-  right: 4.75%;
-  top: 2.75%;
+  right: 0;
+  top: 1.7%;
   font-size: 2.5rem;
   background: transparent;
   border-color: transparent;
@@ -986,7 +989,7 @@ Blog
 }
 .blog-footer p {
   margin-bottom: 0;
-  font-weight: bold;
+  font-weight: 700;
   color: var(--clr-grey-5);
 }
 .blog-footer p:first-of-type {
@@ -1031,7 +1034,7 @@ Footer
 .footer h4 {
   margin-top: 0.5rem;
   color: var(--clr-white);
-  font-weight: normal;
+  font-weight: 500;
   text-transform: uppercase;
 }
 .footer h4 span {
@@ -1168,8 +1171,8 @@ Contact Page
   text-align: center;
   box-shadow: var(--light-shadow);
   transition: var(--transition);
-  width: 90vw;
-  max-width: 35rem;
+  width: 120vw;
+  max-width: 40rem;
 }
 .contact-form:hover {
   box-shadow: var(--dark-shadow);
@@ -1189,14 +1192,13 @@ Contact Page
   margin-bottom: 1.25rem;
   background: var(--clr-grey-10);
   border-radius: var(--radius);
-  text-transform: uppercase;
-  letter-spacing: var(--spacing);
+  letter-spacing: 0.1rem;
 }
 .form-control::placeholder {
   font-family: var(--ff-primary);
   color: var(--clr-grey-1);
-  text-transform: uppercase;
-  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
 }
 .submit-btn {
   display: block;

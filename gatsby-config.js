@@ -58,19 +58,16 @@ module.exports = {
         icon: "src/assets/site-icon-white.png",
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: `Roboto`,
-    //         variants: [`400`, `700`],
-    //       },
-    //       {
-    //         family: `Open Sans`,
-    //       },
-    //     ],
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Roboto`,
+            variants: [`100`, `200`, `300`, `400`, `500`, `700`, `800`],
+          },
+        ],
+      },
+    },
   ],
 }

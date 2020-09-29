@@ -7,7 +7,7 @@ import ReactRotatingText from 'react-rotating-text';
 
 const query = graphql`
   {
-    file(relativePath: {eq: "nicolas-img.png"}) {
+    file(relativePath: {eq: "nicolas-img-small.png"}) {
       id
       childImageSharp {
         fluid {
