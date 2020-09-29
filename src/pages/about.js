@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Title from "../components/Title"
 import Image from "gatsby-image"
 import AboutMe from "../assets/svg/about-me.svg"
+import Reactmarkdown from "react-markdown"
 
 export const query = graphql`
   {
@@ -11,13 +12,11 @@ export const query = graphql`
       nodes {
         id
         title
-        info
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
+        intro 
+        info {
+          id
+          text
+          name
         }
         stack {
           name
@@ -33,14 +32,37 @@ const About = ({
     about: { nodes }
   }
 }) => {
-  const {title,info,image,stack} = nodes[0]
+  const {title,intro,info,stack} = nodes[0]
+  const [value, setValue] = React.useState(0)
+  const {text,name,id} = info[value]
+  console.log(text)
   return <Layout>
     <section className="about-page">
       <div className="section-center about-center">
         <AboutMe className="about-img"/>
         <article className="about-text">
           <Title title={title}/>
-          <p>{info}</p>
+          <Reactmarkdown source={intro}/>
+          <div className="about-info">
+            <div className="about-btn-container">
+              {info.map((item, index)=>{
+                return (
+                <button 
+                  key={item.id} 
+                  onClick={()=>setValue(index)}
+                  className={`job-btn ${index === value && 'active-btn'}`}>
+                    {item.name}
+                </button>
+                )
+              })}
+            </div>
+            <article className="about-info-container">
+              <Reactmarkdown source={text} className="about-info-text"/>
+            </article>
+          </div>
+          
+          {/* <p>{info}</p> */}
+          {/* <Reactmarkdown source={info}/> */}
           <div className="about-stack">
             {stack.map(item=>{
               return <span key={item.id}>{item.name}</span>

@@ -1119,7 +1119,55 @@ About Page
   margin-right: 0;
 }
 .about-text p {
-  line-height: 2;
+  line-height: 1.6;
+  height: fit-content;
+}
+.about-info {
+  margin: 0 auto;
+  max-width: var(--max-width);
+  height: max-content;
+}
+.about-info-container {
+  /* width: 50rem; */
+  /* max-width: 100%; */
+}
+.about-btn-container {
+  left: 0;
+  display: flex;
+  max-width: 100%;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  margin-bottom: 1rem;
+}
+.about-info-text a{
+  text-decoration: none;
+  color: black;
+  transition: var(--transition);
+}
+.about-info-text a:hover{
+  text-decoration: none;
+  transition: var(--transition);
+  color: var(--clr-primary-5);
+}
+.about-btn-container .job-btn {
+  background: transparent;
+  border-color: transparent;
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  letter-spacing: var(--spacing);
+  margin: 0 0.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+  padding: 0.25rem 0;
+  line-height: 1;
+}
+.about-btn-container .job-btn:hover {
+  color: var(--clr-primary-5);
+  box-shadow: 0 2px var(--clr-primary-5);
+}
+.about-btn-container .active-btn {
+  color: var(--clr-primary-5);
+  box-shadow: 0 2px var(--clr-primary-5);
 }
 .stack-container {
   width: 30rem;
@@ -1153,6 +1201,22 @@ About Page
   }
   .about-text {
     grid-column: 6 / -1;
+  }
+  .about-info {
+    width: 50vw;
+    max-width: 100%;
+    max-height: max-content;
+    height: max-content;
+  }
+  .about-info-container {
+    max-height: max-content;
+  }
+  .about-btn-container {
+    /* display: flex-start; */
+    /* max-width: 65%; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* margin-bottom: 1rem; */
   }
 }
 /*

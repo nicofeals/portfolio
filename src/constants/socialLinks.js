@@ -3,9 +3,9 @@ import {
   FaGithubSquare,
   FaLinkedin,
   FaEnvelopeSquare,
-  FaBehanceSquare,
-  FaTwitterSquare,
+  FaExternalLinkSquareAlt,
 } from "react-icons/fa"
+import Resume from "../assets/CV_en.pdf"
 
 const data = [
   {
@@ -22,14 +22,24 @@ const data = [
     id: 3,
     icon: <FaEnvelopeSquare className="social-icon"></FaEnvelopeSquare>,
     url: "mailto:nicolas.ceccarello@epita.fr",
+  },
+  {
+    id: 4,
+    icon: <FaExternalLinkSquareAlt className="social-icon"></FaExternalLinkSquareAlt>,
+    url: Resume,
   }
 ]
 const links = data.map(link => {
   return (
     <li key={link.id}>
-      <a style={{display: "table-cell"}} href={link.url} className="social-link" target="_blank">
-        {link.icon}
-      </a>
+      {link.id == 4 ? 
+        <a style={{display: "table-cell"}} href={link.url} className="social-link" target="_blank" download title="Download my resume">
+          {link.icon}
+        </a> :
+        <a style={{display: "table-cell"}} href={link.url} className="social-link" target="_blank">
+          {link.icon}
+        </a>
+      }
     </li>
   )
 })
