@@ -39,23 +39,29 @@ export default ({data}) => {
   const {allStrapiProjects:{nodes:projects}} = data
   const [showScroll, setShowScroll] = useState(false)
   const [iconColor, setIconColor] = useState("black")
-  const checkScrollTop = () => {    
-    if (!showScroll && window.pageYOffset > 400){
-        setShowScroll(true)    
-    } else if (showScroll && window.pageYOffset <= 400){
-        setShowScroll(false)    
-    }  
+  const checkScrollTop = () => {
+    if (typeof window !== 'undefined') {
+      if (!showScroll && window.pageYOffset > 400){
+          setShowScroll(true)    
+      } else if (showScroll && window.pageYOffset <= 400){
+          setShowScroll(false)    
+      }
+    }
   };
 
   const listenScrollEvent = e => {
-    if (window.scrollY > 4560) {
-      setIconColor("white")
-    } else {
-      setIconColor("black")
+    if (typeof window !== 'undefined') {
+      if (window.scrollY > 4560) {
+        setIconColor("white")
+      } else {
+        setIconColor("black")
+      }
     }
   }
-  window.addEventListener('scroll', checkScrollTop)
-  window.addEventListener('scroll', listenScrollEvent)
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', checkScrollTop)
+    window.addEventListener('scroll', listenScrollEvent)
+  }
   return (
     <Layout>
       <div id="home">

@@ -34,14 +34,18 @@ const ProjectsPage = ({
   data:{allStrapiProjects:{nodes:projects}}
 }) => {
   const [showScroll, setShowScroll] = useState(false)
-  const checkScrollTop = () => {    
-    if (!showScroll && window.pageYOffset > 400){
-        setShowScroll(true)    
-    } else if (showScroll && window.pageYOffset <= 400){
-        setShowScroll(false)    
-    }  
+  const checkScrollTop = () => {
+    if (typeof window !== 'undefined') {    
+      if (!showScroll && window.pageYOffset > 400){
+          setShowScroll(true)    
+      } else if (showScroll && window.pageYOffset <= 400){
+          setShowScroll(false)    
+      }  
+    }
   };
-  window.addEventListener('scroll', checkScrollTop)
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', checkScrollTop)
+  }
   return <Layout>
     <section className="projects-page">
       <Projects projects={projects} title="ALL PROJECTS"/>
