@@ -4,9 +4,6 @@ import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 import Reactmarkdown from "react-markdown"
 
 const Project = ({description, title, github, stack, url, image, index, duration}) => {
-  if (!(!url || 0 === url.length)) {
-    console.log(url)
-  }
   return <article className="project">
     <Image fluid={image.childImageSharp.fluid} className="project-img"></Image>
     <div className="project-info">

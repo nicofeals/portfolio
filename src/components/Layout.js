@@ -8,13 +8,10 @@ const Layout = ({ children }) => {
   const toggleSidebar = () => {
     setIsOpen(!isOpen)
   }
-  // console.log(children.props.className === "error-page")
   var home = false
   if (children.length === 5 || children.props.className === "error-page") {
-    console.log("TRUE")
     home = true
   }
-  console.log(home)
   return (
     <>
       <Navbar home={home} toggleSidebar={toggleSidebar}/>

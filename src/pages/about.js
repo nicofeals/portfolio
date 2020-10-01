@@ -34,7 +34,6 @@ const About = ({
   const {title,intro,info,stack} = nodes[0]
   const [value, setValue] = React.useState(0)
   const {text} = info[value]
-  console.log(text)
   return <Layout>
     <section className="about-page">
       <div className="section-center about-center">
