@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
 import SmallTitle from "./SmallTitle"
 import Tools from "./Tools"
-// import images from "../constants/services"
 
 const Services = () => {
   const language_query = graphql`
@@ -38,7 +37,7 @@ const Services = () => {
           </div>
         )})}
     </div>
-    <div className="underline" style={{width:700, height:1}}></div>
+    <div className="underline" style={{width:"50%", height:1}}></div>
     <SmallTitle title="Tools" />
     <Tools></Tools>
   </section>

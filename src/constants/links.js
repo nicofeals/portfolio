@@ -1,6 +1,4 @@
 import React from "react"
-import { Link as GLink } from "gatsby"
-import { Link as RLink} from "react-scroll"
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 const data = [
   {
@@ -36,27 +34,7 @@ const data = [
 ]
 
 const tempLinks = data.map(link => {
-//   if (link.text == 'about' || link.text == 'contact' || link.text == 'home') {
-//     return ( 
-//       <li key={link.id}>
-//         <GLink to={link.url} >{link.text}</GLink>
-//       </li>
-//     )
-//   } else {
-//     return (
-//       <li key={link.id}>
-//       <RLink
-//         // activeClass="active"
-//         to={link.text}
-//         spy={true}
-//         smooth={true}
-//         offset={-70}
-//         duration={500}
-//         className="nav-anchor">{link.text}</RLink>
-//     </li>
-//   )
-// }
-  if (link.text != "featured-projects") {
+  if (link.text !== "featured-projects") {
     return (
       <li key={link.id}>
         <AnchorLink
@@ -69,7 +47,6 @@ const tempLinks = data.map(link => {
     )
   }
 })
-// I KNOW WE CAN COMBINE IT !!!!!
 
 export default ({ styleClass }) => {
   return (

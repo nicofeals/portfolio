@@ -2,7 +2,6 @@ import React from "react"
 import Title from "./Title"
 import { MdShortText } from "react-icons/md"
 import { graphql, useStaticQuery } from "gatsby"
-import { Link } from "gatsby"
 import Image from "gatsby-image"
 
 export const query = graphql`
@@ -35,7 +34,7 @@ const Jobs = () => {
     allStrapiJobs:{ nodes:jobs },
   } = data
   const [value, setValue] = React.useState(0)
-  const {company, position, date, website, logo, desc} = jobs[value]
+  const {position, date, logo, desc} = jobs[value]
   return (
     <section className="section jobs">
       <Title title="EXPERIENCE"></Title>

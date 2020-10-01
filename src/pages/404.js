@@ -3,7 +3,6 @@ import Layout from "../components/Layout"
 import { Link } from "gatsby"
 import SEO from "../components/SEO"
 import NotFound from "../assets/svg/not-found.svg"
-import { Button } from "react-scroll"
 
 const Error = () => {
   return <Layout>

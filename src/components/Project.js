@@ -1,7 +1,8 @@
 import React from "react"
-import PropTypes from "prop-types"
 import Image from "gatsby-image"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
+import Reactmarkdown from "react-markdown"
+
 const Project = ({description, title, github, stack, url, image, index, duration}) => {
   if (!(!url || 0 === url.length)) {
     console.log(url)
@@ -11,9 +12,9 @@ const Project = ({description, title, github, stack, url, image, index, duration
     <div className="project-info">
       <span className="project-number">{duration}</span>
       <h3>{title}</h3>
-      <p className="project-desc">
+      <Reactmarkdown className="project-desc">
         {description}
-      </p>
+      </Reactmarkdown>
       <div className="project-stack">
         {stack.map((item)=>{
           return <span key={item.id}>{item.name}</span>

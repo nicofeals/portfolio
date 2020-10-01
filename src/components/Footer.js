@@ -1,6 +1,6 @@
 import React from "react"
 import SocialLinks from "../constants/socialLinks"
-import Navbar from "./Navbar"
+
 const Footer = () => {
   return (
     <footer className="footer">

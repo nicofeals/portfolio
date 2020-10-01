@@ -32,7 +32,7 @@ const data = [
 const links = data.map(link => {
   return (
     <li key={link.id}>
-      {link.id == 4 ? 
+      {link.id === 4 ? 
         <a style={{display: "table-cell"}} href={link.url} className="social-link" target="_blank" download title="Download my resume">
           {link.icon}
         </a> :

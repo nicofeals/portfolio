@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Title from "../components/Title"
-import Image from "gatsby-image"
 import AboutMe from "../assets/svg/about-me.svg"
 import Reactmarkdown from "react-markdown"
 
@@ -34,7 +33,7 @@ const About = ({
 }) => {
   const {title,intro,info,stack} = nodes[0]
   const [value, setValue] = React.useState(0)
-  const {text,name,id} = info[value]
+  const {text} = info[value]
   console.log(text)
   return <Layout>
     <section className="about-page">
@@ -43,6 +42,7 @@ const About = ({
         <article className="about-text">
           <Title title={title}/>
           <Reactmarkdown source={intro}/>
+          <div className="underline" style={{width:"100%", height:0.8}}></div>
           <div className="about-info">
             <div className="about-btn-container">
               {info.map((item, index)=>{
@@ -59,10 +59,7 @@ const About = ({
             <article className="about-info-container">
               <Reactmarkdown source={text} className="about-info-text"/>
             </article>
-          </div>
-          
-          {/* <p>{info}</p> */}
-          {/* <Reactmarkdown source={info}/> */}
+          </div>          
           <div className="about-stack">
             {stack.map(item=>{
               return <span key={item.id}>{item.name}</span>
