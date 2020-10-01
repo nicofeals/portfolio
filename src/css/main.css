@@ -1041,6 +1041,7 @@ Footer
   color: var(--clr-primary-5);
 }
 .footer-links {
+  justify-content: center;
   margin: 0 auto 1rem auto;
 }
 .footer .social-link {
@@ -1137,7 +1138,7 @@ About Page
   max-width: 100%;
   /* flex-direction: column; */
   /* justify-content: center; */
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .about-info-text a{
   text-decoration: none;

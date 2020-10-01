@@ -13,12 +13,13 @@ import { MdNotificationsNone } from "react-icons/md"
 
 export const query = graphql`
   {
-    allStrapiProjects(filter: {featured: {eq: true}}) {
+    allStrapiProjects(filter: {featured: {eq: true}}, sort: {order: DESC, fields: strapiId}) {
       nodes {
         duration
         description
         github
         id
+        url
         title
         image {
           childImageSharp {

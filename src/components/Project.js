@@ -3,6 +3,9 @@ import PropTypes from "prop-types"
 import Image from "gatsby-image"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 const Project = ({description, title, github, stack, url, image, index, duration}) => {
+  if (!(!url || 0 === url.length)) {
+    console.log(url)
+  }
   return <article className="project">
     <Image fluid={image.childImageSharp.fluid} className="project-img"></Image>
     <div className="project-info">
@@ -18,6 +21,7 @@ const Project = ({description, title, github, stack, url, image, index, duration
       </div>
       <div className="project-links">
         { !(!github || 0 === github.length) && <a style={{display: "table-cell"}} href={github} target="_blank"><FaGithubSquare className="project-icon"/></a>}
+        { !(!url || 0 === url.length) && <a style={{display: "table-cell"}} href={url} target="_blank"><FaShareSquare className="project-icon"/></a>}
       </div>
     </div>
   </article>

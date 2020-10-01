@@ -3,7 +3,7 @@ import {
   FaGithubSquare,
   FaLinkedin,
   FaEnvelopeSquare,
-  FaExternalLinkSquareAlt,
+  FaShareSquare,
 } from "react-icons/fa"
 import Resume from "../assets/CV_en.pdf"
 
@@ -25,7 +25,7 @@ const data = [
   },
   {
     id: 4,
-    icon: <FaExternalLinkSquareAlt className="social-icon"></FaExternalLinkSquareAlt>,
+    icon: <FaShareSquare className="social-icon"></FaShareSquare>,
     url: Resume,
   }
 ]

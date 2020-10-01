@@ -46,6 +46,7 @@ const Hero = () => {
             </div>
             <h3> student.</h3>
           </div>
+          <p style={{marginBottom:"0.3rem",marginTop:"0.2rem"}}>I am currently looking for an end-of-studies internship.</p>
           <Link to="/contact" className="btn">Let's get in touch!</Link>
           <SocialLinks/>
         </div>
