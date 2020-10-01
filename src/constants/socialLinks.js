@@ -5,7 +5,7 @@ import {
   FaEnvelopeSquare,
   FaShareSquare,
 } from "react-icons/fa"
-import Resume from "../assets/CV_en.pdf"
+import Resume from "../assets/CV_EN.pdf"
 
 const data = [
   {
