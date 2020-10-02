@@ -1108,6 +1108,7 @@ About Page
   padding: 7rem 0;
 }
 .about-img {
+  max-width: 80%;
   margin-bottom: 2rem;
   height: 25rem;
 }
@@ -1154,9 +1155,9 @@ About Page
   background: transparent;
   border-color: transparent;
   text-transform: capitalize;
-  font-size: 1.25rem;
+  font-size: 0.8rem;
   letter-spacing: var(--spacing);
-  margin: 0 0.5rem;
+  margin: 0 0.3rem;
   transition: var(--transition);
   cursor: pointer;
   padding: 0.25rem 0;
@@ -1188,6 +1189,15 @@ About Page
   margin-right: 0.25rem;
   font-size: 1rem;
 }
+@media screen and (min-width: 600px) {
+  .about-btn-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .about-btn-container .job-btn {
+    font-size: 1.25rem;
+  }
+}
 @media screen and (min-width: 992px) {
   .about-center {
     display: grid;
@@ -1213,12 +1223,12 @@ About Page
     max-height: max-content;
   }
   .about-btn-container {
-    /* display: flex-start; */
-    /* max-width: 65%; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* margin-bottom: 1rem; */
   }
+  
+  .about-btn-container .job-btn {
+    font-size: 1.25rem;
+  }
+
 }
 /*
 ===============
@@ -1236,8 +1246,7 @@ Contact Page
   text-align: center;
   box-shadow: var(--light-shadow);
   transition: var(--transition);
-  width: 120vw;
-  max-width: 40rem;
+  width: 85%;
 }
 .contact-form:hover {
   box-shadow: var(--dark-shadow);
@@ -1274,48 +1283,10 @@ Contact Page
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
-/*
-===============
-Blog Template
-===============
-*/
-.blog-template {
-  padding: 5rem 0;
-}
 
-.blog-template h1,
-.blog-template h2 {
-  text-align: center;
-}
-.blog-template ul {
-  margin-top: 2rem;
-  display: inline-block;
-}
-.blog-template ul li {
-  background: var(--clr-grey-9);
-  color: var(--clr-grey-5);
-  padding: 0.5rem 1rem;
-  margin: 1rem 0;
-  text-transform: uppercase;
-}
-
-.blog-template blockquote {
-  background: var(--clr-primary-9);
-  border-radius: var(--radius);
-  padding: 1rem;
-  line-height: 2;
-  color: var(--clr-primary-5);
-  margin: 2rem 0;
-}
-.blog-template pre {
-  background: #222;
-  color: yellow;
-  overflow-x: scroll;
-  padding: 1rem 1.5rem;
-  border-radius: var(--radius);
-}
-.blog-template img {
-  width: 15rem;
-  height: 15rem;
-  margin: 3rem 0;
+@media screen and (min-width: 992px) {
+  .contact-form {
+    width: 120vw;
+    max-width: 40rem;  
+  }
 }
