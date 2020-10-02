@@ -212,9 +212,10 @@ p {
   justify-content: space-between;
 }
 .social-link {
-  font-size: 1.75rem;
+  font-size: 2.95rem;
   color: var(--clr-grey-1);
   transition: var(--transition);
+  /* margin-right: 3rem; */
 }
 .social-link:hover {
   color: var(--clr-primary-5);

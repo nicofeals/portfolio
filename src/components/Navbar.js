@@ -15,7 +15,7 @@ const Navbar = ({home, toggleSidebar}) => {
             <img src={logo} alt="logo" width='140px' className="nav-logo"/>
           </a>
           <button type="button" className="toggle-btn" onClick={toggleSidebar}>
-            <FiMenu></FiMenu>
+            <FiMenu>Menu</FiMenu>
           </button>
         </div>
         <PageLinks styleClass="nav-links"></PageLinks>
