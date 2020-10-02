@@ -4,7 +4,7 @@ import SocialLinks from "../constants/socialLinks"
 import { FiX } from "react-icons/fi"
 const Sidebar = ({isOpen, toggleSidebar}) => {
   return <aside className={`sidebar ${isOpen ? "show-sidebar" : ""}`}>
-    <button className="close-btn" onClick={toggleSidebar}>
+    <button className="close-btn" onClick={toggleSidebar} aria-label="Close">
       <FiX>Close</FiX>
     </button>
     <div className="side-container" onClick={toggleSidebar}>

@@ -14,7 +14,7 @@ const Navbar = ({home, toggleSidebar}) => {
           <a href="/">
             <img src={logo} alt="logo" width='140px' className="nav-logo"/>
           </a>
-          <button type="button" className="toggle-btn" onClick={toggleSidebar}>
+          <button type="button" className="toggle-btn" onClick={toggleSidebar} aria-label="Menu">
             <FiMenu>Menu</FiMenu>
           </button>
         </div>
