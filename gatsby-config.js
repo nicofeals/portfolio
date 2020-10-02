@@ -3,6 +3,14 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = 'https://nicolasceccarello.tech',
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === 'production';
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 
 module.exports = {
   siteMetadata: {
@@ -23,6 +31,29 @@ module.exports = {
         name: `assets`,
         path: `${__dirname}/src/assets/`,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            host: 'https://nicolasceccarello.tech',
+            sitemap: 'https://nicolasceccarello.tech/sitemap.xml',
+            policy: [{ userAgent: '*' }]
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          }
+        }
+      }
     },
     {
       resolve: `gatsby-source-strapi`,
