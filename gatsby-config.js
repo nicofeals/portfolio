@@ -30,11 +30,8 @@ module.exports = {
       options: {
         apiURL: process.env.API_URL || "http://localhost:1337",
         queryLimit: 1000, // Default to 100
-        //   contentTypes : `jobs`, `projects`, `blogs`,
-        //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
         contentTypes: [`jobs`, `projects`],
         singleTypes : [`about`],
-        // singleTypes: [],
       },
     },
     {
