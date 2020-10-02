@@ -9,7 +9,8 @@ const Layout = ({ children }) => {
     setIsOpen(!isOpen)
   }
   var home = false
-  if (children.length === 5 || children.props.className === "error-page") {
+  console.log(children)
+  if (children.length === 5 || (typeof children.props !== 'undefined' && children.props.className === "error-page")) {
     home = true
   }
   return (
