@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Projects from "../components/Projects"
 import { BsChevronUp } from "react-icons/bs"
 import { animateScroll as scroll } from "react-scroll"
+import SEO from "../components/SEO"
 
 export const query = graphql`
   {
@@ -47,6 +48,7 @@ const ProjectsPage = ({
     window.addEventListener('scroll', checkScrollTop)
   }
   return <Layout>
+    <SEO title="Projects" description="Nicolas Ceccarello projects" />
     <section className="projects-page">
       <Projects projects={projects} title="ALL PROJECTS"/>
       <BsChevronUp className="scroll-top" onClick={() => scroll.scrollToTop()} style={{display: showScroll ? 'flex' : 'none'}}></BsChevronUp>

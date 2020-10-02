@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Title from "../components/Title"
 import AboutMe from "../assets/svg/about-me.svg"
 import Reactmarkdown from "react-markdown"
+import SEO from "../components/SEO"
 
 export const query = graphql`
   {
@@ -35,6 +36,7 @@ const About = ({
   const [value, setValue] = React.useState(0)
   const {text} = info[value]
   return <Layout>
+    <SEO title="About" description="about Nicolas Ceccarello" />
     <section className="about-page">
       <div className="section-center about-center">
         <AboutMe className="about-img"/>

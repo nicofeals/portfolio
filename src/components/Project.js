@@ -18,8 +18,8 @@ const Project = ({description, title, github, stack, url, image, index, duration
         })}
       </div>
       <div className="project-links">
-        { !(!github || 0 === github.length) && <a style={{display: "table-cell"}} href={github} target="_blank"><FaGithubSquare className="project-icon"/></a>}
-        { !(!url || 0 === url.length) && <a style={{display: "table-cell"}} href={url} target="_blank"><FaShareSquare className="project-icon"/></a>}
+        { !(!github || 0 === github.length) && <a style={{display: "table-cell"}} href={github} target="_blank" rel="noopener" aria-label="Github"><FaGithubSquare className="project-icon"/></a>}
+        { !(!url || 0 === url.length) && <a style={{display: "table-cell"}} href={url} target="_blank" rel="noopener" aria-label="url"><FaShareSquare className="project-icon"/></a>}
       </div>
     </div>
   </article>
