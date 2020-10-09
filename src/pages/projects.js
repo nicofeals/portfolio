@@ -13,6 +13,7 @@ export const query = graphql`
         duration
         description
         github
+        url
         id
         title
         image {
