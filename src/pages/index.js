@@ -9,6 +9,7 @@ import SEO from "../components/SEO"
 import {BsChevronUp} from "react-icons/bs"
 import { animateScroll as scroll } from "react-scroll"
 import { MdNotificationsNone } from "react-icons/md"
+import useDarkMode from 'use-dark-mode';
 
 export const query = graphql`
   {
@@ -37,6 +38,7 @@ export const query = graphql`
 `
 
 export default ({data}) => {
+  const darkMode = useDarkMode(false);
   const {allStrapiProjects:{nodes:projects}} = data
   const [showScroll, setShowScroll] = useState(false)
   const [iconColor, setIconColor] = useState("black")
@@ -52,7 +54,7 @@ export default ({data}) => {
 
   const listenScrollEvent = e => {
     if (typeof window !== 'undefined') {
-      if (window.scrollY > 4560) {
+      if (darkMode.value === true) {
         setIconColor("white")
       } else {
         setIconColor("black")

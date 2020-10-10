@@ -33,6 +33,15 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-use-dark-mode',
+      options: {
+        classNameDark: 'body.dark-mode',
+        classNameLight: 'body.light-mode',
+        storageKey: 'darkMode',
+        minify: true,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         resolveEnv: () => NETLIFY_ENV,

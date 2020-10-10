@@ -11,7 +11,7 @@ Variables
 ===============
 */
 
-:root {
+body.light-mode {
   /* dark shades of primary color*/
   /* --clr-primary-1: hsl(43, 86%, 17%); */
   --clr-primary-1: hsl(162, 21%, 35%);
@@ -49,6 +49,45 @@ Variables
   --max-width: 1240px;
   --fixed-width: 700px;
 }
+
+body.dark-mode {
+  /* dark shades of primary color*/
+  /* --clr-primary-1: hsl(43, 86%, 17%); */
+  --clr-primary-1: hsl(162, 21%, 35%);
+  --clr-primary-2: hsl(153, 22%, 41%);
+  --clr-primary-3: hsl(136, 16%, 47%);
+  --clr-primary-4: hsl(153, 14%, 46%);
+  --clr-primary-5: #769781;
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(143, 24%, 57%);
+  --clr-primary-7: hsl(130, 37%, 67%);
+  --clr-primary-8: hsl(138, 28%, 70%);
+  --clr-primary-9: hsl(0, 0%, 91%);
+  --clr-primary-10: hsl(0, 0%, 0%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(0, 0%, 93%);
+  --clr-grey-3: hsl(0, 0%, 95%);
+  --clr-grey-4: hsl(153, 5%, 34%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(0, 0%, 32%);
+  --clr-grey-8: hsl(0, 0%, 29%);
+  --clr-grey-9: hsl(134, 17%, 85%);
+  --clr-grey-10: hsl(0, 0%, 0%);
+  --clr-green-dark: hsl(125, 67%, 35%);
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-white: hsl(0, 0%, 5%);
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: 'Roboto', sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.14rem;
+  --small-spacing: 0.03rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1240px;
+  --fixed-width: 700px;
+}
 /*
 =============== 
 Global Styles
@@ -64,6 +103,8 @@ Global Styles
 }
 body {
   font-family: var(--ff-secondary);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
   background: var(--clr-white);
   color: var(--clr-grey-1);
   line-height: 1.3;
@@ -266,7 +307,10 @@ Navbar
   margin-bottom: 0.375rem;
 }
 .nav-logo{
+  /* top: 0; */
   margin-top: 1rem;
+  height: 5rem;
+  width: 5rem;
 }
 .toggle-btn {
   position: fixed;
@@ -275,7 +319,7 @@ Navbar
   margin-right: 0.1rem;
   background: transparent;
   border-color: transparent;
-  color: black;
+  color: var(--clr-grey-1);
   cursor: pointer;
   transition: var(--transition);
 }
@@ -533,6 +577,7 @@ Hero
 
 .scroll-top {
   position: fixed;
+  color: var(--clr-grey-1);
   bottom: 0;
   right: 0;
   margin-bottom: 1rem;
@@ -746,6 +791,7 @@ Jobs
 }
 .job-btn {
   background: transparent;
+  color: var(--clr-grey-3);
   border-color: transparent;
   text-transform: capitalize;
   font-size: 1.25rem;
@@ -1027,14 +1073,14 @@ Footer
 */
 .footer {
   height: 9rem;
-  background: #222;
+  background: var(--clr-grey-10);
   text-align: center;
   display: grid;
   place-items: center;
 }
 .footer h4 {
   margin-top: 0.5rem;
-  color: var(--clr-white);
+  color: var(--clr-grey-10);
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -1046,7 +1092,7 @@ Footer
   margin: 0 auto 1rem auto;
 }
 .footer .social-link {
-  color: var(--clr-white);
+  color: var(--clr-grey-3);
 }
 .footer .social-link:hover {
   color: var(--clr-primary-5);
@@ -1290,4 +1336,74 @@ Contact Page
     width: 120vw;
     max-width: 40rem;  
   }
+}
+
+/* ================ */
+/* DARK MODE SWITCH */
+/* ================ */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  margin-top: 0.5rem;
+  margin-right: auto;
+  margin-left: 0.7rem;
+  height: 1.4rem;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--clr-grey-3);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.1rem;
+  width: 1.1rem;
+  left: .1rem;
+  bottom: 0.16rem;
+  background-color: var(--clr-primary-10);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--clr-primary-6);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(27px);
+  -ms-transform: translateX(27px);
+  transform: translateX(27px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
