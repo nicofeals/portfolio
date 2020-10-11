@@ -69,14 +69,14 @@ body.dark-mode {
   --clr-grey-3: hsl(0, 0%, 95%);
   --clr-grey-4: hsl(153, 5%, 34%);
   /* grey used for paragraphs */
-  --clr-grey-5: hsl(0, 0%, 32%);
+  --clr-grey-5: hsl(0, 0%, 72%);
   --clr-grey-8: hsl(0, 0%, 29%);
-  --clr-grey-9: hsl(134, 17%, 85%);
+  --clr-grey-9: hsl(0, 0%, 9%);
   --clr-grey-10: hsl(0, 0%, 0%);
   --clr-green-dark: hsl(125, 67%, 35%);
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
-  --clr-white: hsl(0, 0%, 5%);
+  --clr-white: hsl(0, 0%, 13%);
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: 'Roboto', sans-serif;
   --transition: all 0.3s linear;
@@ -1080,7 +1080,7 @@ Footer
 }
 .footer h4 {
   margin-top: 0.5rem;
-  color: var(--clr-grey-10);
+  color: var(--clr-grey-3);
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -1380,7 +1380,7 @@ Contact Page
   width: 1.1rem;
   left: .1rem;
   bottom: 0.16rem;
-  background-color: var(--clr-primary-10);
+  background-color: var(--clr-grey-10);
   -webkit-transition: .4s;
   transition: .4s;
 }
