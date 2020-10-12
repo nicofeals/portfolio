@@ -1,4 +1,5 @@
 import React from 'react';
+import {HiMoon} from 'react-icons/hi'
 import useDarkMode from 'use-dark-mode';
 
 const ModeToggle = () => {
