@@ -25,17 +25,20 @@
     "gatsby-plugin-robots-txt": "^1.5.3",
     "gatsby-plugin-sharp": "^2.6.36",
     "gatsby-plugin-sitemap": "^2.4.14",
+    "gatsby-plugin-use-dark-mode": "^1.1.2",
     "gatsby-source-filesystem": "^2.3.0",
     "gatsby-source-strapi": "0.0.12",
     "gatsby-transformer-sharp": "^2.5.0",
     "react": "^16.12.0",
+    "react-dark-mode-toggle": "^0.0.10",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^3.10.0",
     "react-markdown": "^4.3.1",
     "react-rotating-text": "^1.4.1",
     "react-scroll": "^1.8.1",
-    "react-text-rotator": "^0.1.1"
+    "react-text-rotator": "^0.1.1",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "eslint-config-react-app": "^5.2.1",
