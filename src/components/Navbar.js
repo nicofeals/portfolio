@@ -1,5 +1,4 @@
 import React from "react"
-import BlackLogo from "../assets/logo_black.png"
 import WhiteLogo from "../assets/logo_white.png"
 import { FiMenu } from "react-icons/fi"
 import PageLinks from "../constants/links"
@@ -7,7 +6,7 @@ import ModeToggle from './ModeToggle'
 import useDarkMode from 'use-dark-mode';
 
 const Navbar = ({home, toggleSidebar}) => {
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode(true, );
   var classname = "navbar"
   if (home === false) {
     classname = "navbar-grey"

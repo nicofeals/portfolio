@@ -3,7 +3,7 @@ import {HiMoon} from 'react-icons/hi'
 import useDarkMode from 'use-dark-mode';
 
 const ModeToggle = () => {
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode(true);
 
   return (
     <label className="switch">
