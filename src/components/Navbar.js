@@ -21,10 +21,7 @@ const Navbar = ({home, toggleSidebar}) => {
     <nav className={classname}>
       <div className="nav-center">
         <div className="nav-header">
-          <a href="/">
-            <img src={WhiteLogo} alt="logo" width='140px' className={dark_mode_class}/>
-            {/* {darkMode.value === true ? <img src={WhiteLogo} alt="logo-white" width='140px' className="nav-logo"/> : <img src={BlackLogo} alt="logo-black" width='140px' className="nav-logo"/>} */}
-          </a>
+          <img src={WhiteLogo} alt="logo" width='140px' className={dark_mode_class}/>
           <ModeToggle />
           <button type="button" className="toggle-btn" onClick={toggleSidebar} aria-label="Menu">
             <FiMenu>Menu</FiMenu>
