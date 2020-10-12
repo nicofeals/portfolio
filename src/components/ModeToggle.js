@@ -6,9 +6,9 @@ const ModeToggle = () => {
   const darkMode = useDarkMode(false);
 
   return (
-    <label class="switch">
+    <label className="switch">
       <input type="checkbox" onClick={darkMode.toggle} checked={darkMode.value}/>
-      <span class="slider round"></span>
+      <span className="slider round"></span>
     </label>
   );
 };
