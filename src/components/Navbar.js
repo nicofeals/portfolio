@@ -13,13 +13,17 @@ const Navbar = ({home, toggleSidebar}) => {
     classname = "navbar-grey"
   }
   console.log("DARK MODE:",darkMode.value)
+  var dark_mode_class = "nav-logo";
+  if (darkMode.value === false) {
+    dark_mode_class = "nav-logo-black"
+  }
+  console.log("Class:",dark_mode_class)
   return (
     <nav className={classname}>
       <div className="nav-center">
         <div className="nav-header">
           <a href="/">
-            {darkMode.value && <img src={WhiteLogo} alt="logo" width='140px' className="nav-logo"/>}
-            {!darkMode.value && <img src={BlackLogo} alt="logo" width='140px' className="nav-logo"/>}
+            <img src={WhiteLogo} alt="logo" width='140px' className={dark_mode_class}/>
             {/* {value.value === true ? <img src={WhiteLogo} alt="logo" width='140px' className="nav-logo"/> : <img src={BlackLogo} alt="logo" width='140px' className="nav-logo"/>} */}
           </a>
           <ModeToggle />

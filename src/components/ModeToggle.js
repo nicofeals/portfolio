@@ -7,7 +7,7 @@ const ModeToggle = () => {
 
   return (
     <label className="switch">
-      <input type="checkbox" onClick={darkMode.toggle} checked={darkMode.value}/>
+      <input type="checkbox" onClick={darkMode.toggle} checked={darkMode.value} readOnly={true}/>
       <span className="slider round"></span>
     </label>
   );
