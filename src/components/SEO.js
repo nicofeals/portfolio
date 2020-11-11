@@ -32,6 +32,7 @@ const SEO = ({title, description}) => {
     <meta name="twitter:author" content={author} />
     <meta name="twitter:title" content={siteTitle} />
     <meta name="twitter:description" content={siteDesc} />
+    <meta name="google-site-verification" content="PAUVRBDAKoZ1CW_-0P5FLwWFvgsBhBnntVJZ4ihRSLc" />
     <meta name="twitter:image" content={`${siteUrl}${image}`} />
     <meta property="og:title" content={siteTitle} />
     <meta property="og:type" content="website" />
